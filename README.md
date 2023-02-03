@@ -1,2 +1,2 @@
 # DISCO
-Test for dico
+Test for disco
