@@ -1,8 +1,22 @@
 import os
+import numpy as np
+import os
+import PIL
+import PIL.Image
+import tensorflow as tf
+from tensorflow.keras.applications import ResNet50
 
 class ImageVectors:
     def convert_to_vector(self,file_path:str) -> str:
         print(f"file path {file_path}")
+        image = tf.keras.utils.load_img(file_path, target_size=(224, 224))
+        x = tf.keras.utils.img_to_array(image)
+        x = np.expand_dims(x, axis=0)
+        x = tf.keras.applications.resnet50.preprocess_input(x)
+        model = tf.keras.applications.resnet50.ResNet50()
+        predictions = model.predict(x)
+        flattened_features = predictions.flatten()
+       # np.save("filename", flattened_features, allow_pickle=True, fix_imports=True)
         
         
         
