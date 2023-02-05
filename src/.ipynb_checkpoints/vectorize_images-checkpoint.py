@@ -106,6 +106,5 @@ class ImageVectors:
         plt.suptitle(f"Compare images to {os.path.basename(cosine_arr[0][0])}", fontsize=12)
         
         plt.savefig(filename)
-        
 
         
