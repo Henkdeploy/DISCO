@@ -55,3 +55,9 @@ python main.py compare-image images/simple_image_retrieval_dataset/test.png imag
 
 ### Step 5:
 The collage will be saved in the output folder in the root of the repo under the name of the query image and a time stamp
+
+
+## To run py test run:
+```bash
+pytest 
+```
