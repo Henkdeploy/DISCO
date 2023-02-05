@@ -13,9 +13,9 @@ pip install -r requirements.txt
 ## Runnint the vectorizing
 
 ### Step 1:
-Create a folder called images in the root folder of the repository
+Make sure there is a folder called images in the root folder of the repository with tmp folder
 ```bash
-mkdir images
+mkdir images/tmp
 ```
 
 ### Step 2:
