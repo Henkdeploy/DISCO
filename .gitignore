@@ -3,3 +3,4 @@
 *.png
 *.npy
 images/
+.DS_Store
