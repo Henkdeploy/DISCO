@@ -18,12 +18,11 @@ class ImageVectors:
     def __init__(self, arg):
         ImageVectors.model = arg
         
-    def pre_process(self,file_path) -> ndarray:
+    def pre_process(self,file_path) -> np.ndarray:
         image = tf.keras.utils.load_img(file_path, target_size=(224, 224))
         ppx = tf.keras.utils.img_to_array(image)
         ppx = np.expand_dims(ppx, axis=0)
         ppx = tf.keras.applications.resnet50.preprocess_input(ppx)
-        print(type(ppx))
         return ppx
     
     def convert_to_vector(self,file_path:str,file_name):
@@ -106,5 +105,6 @@ class ImageVectors:
         plt.suptitle(f"Compare images to {os.path.basename(cosine_arr[0][0])}", fontsize=12)
         
         plt.savefig(filename)
+        
 
         
